@@ -13,10 +13,10 @@ vip_interface: "eth1" # interface name (ex. "ens32")
 patroni_cluster_name: "postgres-cluster"  # specify the cluster name
 synchronous_mode: 'false'  # or 'true' for enable synchronous database replication
 
-patroni_superuser_username: "postgres"
-patroni_superuser_password: "postgres-pass" # please change password
-patroni_replication_username: "replicator"
-patroni_replication_password: "replicator-pass" # please change password
+patroni_superuser_username: "{{ patroni_user }}"
+patroni_superuser_password: "{{ patroni_pass }}" # please change password
+patroni_replication_username: "{{ replica_user}}"
+patroni_replication_password: "{{ replica_pass }}" # please change password
 
 patroni_install_version: "latest"  # or specific version (example 1.5.6)
 
