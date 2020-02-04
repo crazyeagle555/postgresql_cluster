@@ -6,11 +6,11 @@
 # "hostname=" variable is optional (used to change the server name)
 
 [master]
-10.13.0.44 postgresql_exists='false' hostname=pgnode01
+10.13.0.29 postgresql_exists='false' hostname=pgnode01
 
 [replica]
-10.13.0.45 hostname=pgnode02
-10.13.0.46 hostname=pgnode03
+10.13.0.30 hostname=pgnode02
+10.13.0.31 hostname=pgnode03
 
 
 [postgres_cluster:children]
