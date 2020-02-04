@@ -7,7 +7,7 @@ proxy_env: {}
 # -------------------------------------------
 
 # Cluster variables
-cluster_vip: "192.168.85.10" # for client access to databases in the cluster
+cluster_vip: "10.13.0.47" # for client access to databases in the cluster
 vip_interface: "eth1" # interface name (ex. "ens32")
 
 patroni_cluster_name: "postgres-cluster"  # specify the cluster name
@@ -44,9 +44,9 @@ etcd_cluster_name: "etcdCluster" # ETCD_INITIAL_CLUSTER_TOKEN
  # if variable "dcs_exists=true" and "dcs_type=etcd" - specify ip-address your etcd cluster in the "patroni_etcd_hosts" variable
  # example (use existing cluster of 3 nodes)
 patroni_etcd_hosts:
-  - { host: "192.168.85.6", port: "2379" }
-  - { host: "192.168.85.7", port: "2379" }
-  - { host: "192.168.85.8", port: "2379" }
+  - { host: "10.13.0.44", port: "2379" }
+  - { host: "10.13.0.45", port: "2379" }
+  - { host: "10.13.0.46", port: "2379" }
 
  # more options you can specify in the templates/patroni.yml.j2
  # documentation:
